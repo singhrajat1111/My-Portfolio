@@ -5,7 +5,11 @@ import { useScroll, useTransform, useMotionValueEvent } from "framer-motion";
 
 const FRAME_COUNT = 160;
 
-export default function ScrollyCanvas() {
+interface ScrollyCanvasProps {
+  onLoadProgress?: (loaded: number, total: number) => void;
+}
+
+export default function ScrollyCanvas({ onLoadProgress }: ScrollyCanvasProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const imagesRef = useRef<HTMLImageElement[]>([]);
@@ -25,12 +29,22 @@ export default function ScrollyCanvas() {
 
     for (let i = 0; i < FRAME_COUNT; i++) {
       const img = new Image();
-      // Format number to 3 digits e.g. 000, 001
       const indexFormatted = i.toString().padStart(3, "0");
       img.src = `/sequence/frame_${indexFormatted}_delay-0.05s.webp`;
       
       img.onload = () => {
         loadedCount++;
+        
+        // Report progress to parent
+        if (onLoadProgress) {
+          onLoadProgress(loadedCount, FRAME_COUNT);
+        }
+
+        // Special case: Render the first frame immediately once it's ready
+        if (i === 0) {
+          requestAnimationFrame(() => drawImage(0));
+        }
+
         if (loadedCount === FRAME_COUNT) {
           setImagesLoaded(true);
         }
@@ -40,7 +54,7 @@ export default function ScrollyCanvas() {
     }
     
     imagesRef.current = images;
-  }, []);
+  }, [onLoadProgress]);
 
   const drawImage = (index: number) => {
     if (!canvasRef.current || !imagesRef.current[index]) return;
@@ -100,11 +114,6 @@ export default function ScrollyCanvas() {
   return (
     <div ref={containerRef} className="relative w-full h-[500vh] bg-black">
       <div className="sticky top-0 w-full h-screen overflow-hidden opacity-90">
-        {!imagesLoaded && (
-          <div className="absolute inset-0 flex items-center justify-center text-white z-20 bg-black">
-            <span className="animate-pulse tracking-widest text-sm text-neutral-400">LOADING SCENE...</span>
-          </div>
-        )}
         <canvas ref={canvasRef} className="w-full h-full block" />
         <div className="absolute inset-0 bg-black/30 pointer-events-none" />
       </div>
