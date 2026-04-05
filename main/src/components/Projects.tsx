@@ -6,7 +6,7 @@ export default function Projects() {
       title: "Syncra",
       description: "A real-time chat based application built with modern web technologies. Experience seamless communication.",
       github: "https://github.com/singhrajat1111/chat_application",
-      live: "https://chat-application-theta-sepia.vercel.app/",
+      live: "https://syncra-red.vercel.app",
       tags: ["Real-time", "Chat", "Fullstack"]
     },
     {

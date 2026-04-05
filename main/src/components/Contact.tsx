@@ -27,7 +27,7 @@ export default function Contact() {
     <section className="relative w-full min-h-[70vh] bg-neutral-950 text-white flex flex-col justify-between px-6 md:px-16 pt-24 pb-8 z-20 border-t border-white/5">
       <div className="max-w-7xl mx-auto w-full flex-grow flex flex-col justify-center">
         <h2 className="text-6xl md:text-9xl font-bold tracking-tighter mb-8 text-neutral-200">
-          Let's create <br /> something <span className="text-neutral-500 italic font-serif">iconic.</span>
+          Let&apos;s create <br /> something <span className="text-neutral-500 italic font-serif">iconic.</span>
         </h2>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mt-12">
