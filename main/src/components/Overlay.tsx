@@ -60,8 +60,8 @@ export default function Overlay() {
             Bridging design <br className="hidden md:block"/> and engineering.
           </h2>
           <div className="flex gap-4 mt-8">
-            <span className="px-6 py-2 border border-white/20 rounded-full backdrop-blur-md text-white/80 font-medium tracking-wider text-sm uppercase shadow-[0_0_20px_rgba(255,255,255,0.1)]">Frontend</span>
-            <span className="px-6 py-2 border border-white/20 rounded-full backdrop-blur-md text-white/80 font-medium tracking-wider text-sm uppercase shadow-[0_0_20px_rgba(255,255,255,0.1)]">Motion</span>
+            <span className="px-6 py-2 border border-white/20 rounded-full backdrop-blur-md text-white/80 font-medium tracking-wider text-sm uppercase shadow-[0_0_20px_rgba(255,255,255,0.1)]">Full Stack</span>
+            <span className="px-6 py-2 border border-white/20 rounded-full backdrop-blur-md text-white/80 font-medium tracking-wider text-sm uppercase shadow-[0_0_20px_rgba(255,255,255,0.1)]">AI</span>
           </div>
         </motion.div>
 
