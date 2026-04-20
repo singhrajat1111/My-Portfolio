@@ -10,6 +10,13 @@ export default function Projects() {
       tags: ["Real-time", "Chat", "Fullstack"]
     },
     {
+      title: "Code-Atlas",
+      description: "An interactive code visualization tool that transforms complex codebases into intuitive, navigable maps with integration of Ai so you can get answers in your native language at your comfort.",
+      github: "https://github.com/singhrajat1111/Code-Atlas",
+      live: "#",
+      tags: ["Next.js", "Python", "Tailwind", "Typescript"]
+    },
+    {
       title: "E-Commerce Experience",
       description: "An immersive headless commerce platform focusing on premium 3D product interactions and fluid transitions.",
       github: "#",
@@ -29,16 +36,16 @@ export default function Projects() {
     <section className="relative w-full min-h-screen bg-black text-white py-32 px-6 md:px-16 z-20">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-4xl md:text-6xl font-bold mb-16 tracking-tight">Selected Works</h2>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
-            <div 
-              key={index} 
+            <div
+              key={index}
               className="group relative flex flex-col p-8 rounded-3xl bg-white/[0.03] border border-white/10 backdrop-blur-md overflow-hidden transition-all duration-500 hover:-translate-y-2 hover:bg-white/[0.08]"
             >
               {/* Subtle hover glow */}
               <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none rounded-3xl" />
-              
+
               <div className="flex-grow z-10">
                 <div className="flex gap-2 mb-6">
                   {project.tags.map(tag => (
@@ -54,7 +61,7 @@ export default function Projects() {
               </div>
 
               <div className="flex items-center gap-4 mt-auto z-10 pt-6 border-t border-white/10">
-                <a 
+                <a
                   href={project.live}
                   target="_blank"
                   rel="noreferrer"
@@ -62,7 +69,7 @@ export default function Projects() {
                 >
                   Live Site <ArrowUpRight className="w-4 h-4" />
                 </a>
-                <a 
+                <a
                   href={project.github}
                   target="_blank"
                   rel="noreferrer"
