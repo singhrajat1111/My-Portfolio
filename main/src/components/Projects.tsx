@@ -3,7 +3,6 @@ import { ArrowUpRight, GitBranch } from "lucide-react";
 export default function Projects() {
   const projects = [
     {
-<<<<<<< HEAD
       title: "Bunshin AI",
       description: "An AI Agent Marketplace with same origin; but alternate identities. Visit and you will never regret.",
       github: "https://github.com/singhrajat1111/bunshin-ai",
@@ -17,24 +16,19 @@ export default function Projects() {
       live: "https://saar-ai-azure.vercel.app/",
       tags: ["Python", "Machine Learning", "Data Analysis", "AI"]
     },
-    {
-=======
->>>>>>> 33c9d99c92fd927dc363f6b5099adff6ed0d586c
+    {   
       title: "Syncra",
       description: "A real-time chat based application built with modern web technologies. Experience seamless communication.",
       github: "https://github.com/singhrajat1111/chat_application",
       live: "https://syncra-red.vercel.app",
-<<<<<<< HEAD
       tags: ["Real-time", "Chat", "Fullstack", "WebSocket"]
-    },
+    },    
     {
       title: "Astro-Rudra-K",
       description: "An astrology consultation platform with feature of kundli-generator",
       github: "https://github.com/Mr-Udit/Astro_Rudra_frontend",
       live: "https://astro-rudra-frontend-bgrc.onrender.com",
       tags: ["React", "Node.js", "Tailwind", "Python"]
-=======
-      tags: ["Real-time", "Chat", "Fullstack"]
     },
     {
       title: "Code-Atlas",
@@ -56,7 +50,6 @@ export default function Projects() {
       github: "#",
       live: "#",
       tags: ["React", "D3.js", "Tailwind"]
->>>>>>> 33c9d99c92fd927dc363f6b5099adff6ed0d586c
     }
   ];
 
