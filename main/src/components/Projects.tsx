@@ -2,6 +2,14 @@ import { ArrowUpRight, GitBranch } from "lucide-react";
 
 export default function Projects() {
   const projects = [
+
+    {
+      title: "RAJJO",
+      description: "A Local-First Autonomous Desktop Agent. It is designed to plan and execute multi-step tasks directly on your computer with strict security boundaries, human-in-the-loop approval gating, and token-by-token streaming",
+      github: "https://github.com/singhrajat1111/Rajjo",
+      live: "#",
+      tags: ["RAG", "Python", "Langraph", "Electron"]
+    },
     {
       title: "Bunshin AI",
       description: "An AI Agent Marketplace with same origin; but alternate identities. Visit and you will never regret.",
@@ -16,40 +24,19 @@ export default function Projects() {
       live: "https://saar-ai-azure.vercel.app/",
       tags: ["Python", "Machine Learning", "Data Analysis", "AI"]
     },
-    {   
+    {
       title: "Syncra",
       description: "A real-time chat based application built with modern web technologies. Experience seamless communication.",
       github: "https://github.com/singhrajat1111/chat_application",
       live: "https://syncra-red.vercel.app",
       tags: ["Real-time", "Chat", "Fullstack", "WebSocket"]
-    },    
+    },
     {
       title: "Astro-Rudra-K",
       description: "An astrology consultation platform with feature of kundli-generator",
       github: "https://github.com/Mr-Udit/Astro_Rudra_frontend",
       live: "https://astro-rudra-frontend-bgrc.onrender.com",
       tags: ["React", "Node.js", "Tailwind", "Python"]
-    },
-    {
-      title: "Code-Atlas",
-      description: "An interactive code visualization tool that transforms complex codebases into intuitive, navigable maps with integration of Ai so you can get answers in your native language at your comfort.",
-      github: "https://github.com/singhrajat1111/Code-Atlas",
-      live: "#",
-      tags: ["Next.js", "Python", "Tailwind", "Typescript"]
-    },
-    {
-      title: "E-Commerce Experience",
-      description: "An immersive headless commerce platform focusing on premium 3D product interactions and fluid transitions.",
-      github: "#",
-      live: "#",
-      tags: ["Three.js", "Next.js", "Shopify"]
-    },
-    {
-      title: "Fintech Dashboard",
-      description: "Data-heavy dashboard with real-time charting, dark mode aesthetics, and micro-interactions.",
-      github: "#",
-      live: "#",
-      tags: ["React", "D3.js", "Tailwind"]
     }
   ];
 
